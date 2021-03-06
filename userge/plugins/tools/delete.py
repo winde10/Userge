@@ -9,7 +9,7 @@
 from userge import userge, Message
 
 
-@userge.on_cmd("del", about={'header': "delete replied message"})
+@userge.on_cmd("dl", about={'header': "delete replied message"})
 async def del_msg(message: Message):
     msg_ids = [message.message_id]
     if message.reply_to_message:
