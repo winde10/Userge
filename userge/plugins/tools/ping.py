@@ -8,7 +8,7 @@
 
 from datetime import datetime
 
-from userge import userge, Message
+from userge import userge, Message, get_version
 
 
 @userge.on_cmd("ping", about={
@@ -20,4 +20,6 @@ async def pingme(message: Message):
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
     up_time = userge.uptime
-    await message.edit(f"**Pong!**\n`{m_s} ms`\n`Uptime: {up_time}`")
+    ub_version = get_version()
+    await message.edit(f"**Pong!**\n`{m_s} ms`\n`Uptime : {up_time}`\n`Version : {ub_version}`")
+ 
