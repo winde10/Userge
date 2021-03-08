@@ -21,5 +21,5 @@ async def pingme(message: Message):
     m_s = (end - start).microseconds / 1000
     up_time = userge.uptime
     ub_version = get_version()
-    await message.edit(f"**Pong!**\n`{m_s} ms`\n`Uptime : {up_time}`\n`Version : {ub_version}`")
+    await message.edit(f"**Pong!**\n{m_s} ms\nUptime : {up_time}\nVersion : {ub_version}")
  
