@@ -11,7 +11,7 @@ from datetime import datetime
 from userge import userge, Message, get_version
 
 
-@userge.on_cmd("ping", about={
+@userge.on_cmd("hi", about={
     'header': "check how long it takes to ping your userbot",
     'flags': {'-a': "average ping"}}, group=-1)
 async def pingme(message: Message):
@@ -21,5 +21,5 @@ async def pingme(message: Message):
     m_s = (end - start).microseconds / 1000
     up_time = userge.uptime
     ub_version = get_version()
-    await message.edit(f"**Pong!**\n{m_s} ms\nUptime : {up_time}\nVersion : {ub_version}")
+    await message.edit(f"**Hillo!**\n{m_s} ms\nUptime : {up_time}\nVersion : {ub_version}")
  
