@@ -11,7 +11,7 @@ from datetime import datetime
 from userge import userge, Message, get_version
 
 
-@userge.on_cmd("hi", about={
+@userge.on_cmd("hey", about={
     'header': "check how long it takes to ping your userbot",
     'flags': {'-a': "average ping"}}, group=-1)
 async def pingme(message: Message):
